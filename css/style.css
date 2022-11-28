@@ -161,7 +161,7 @@ img {
 }
 
 .logo-desing {
-  width: 5%;
+  width: 10%;
   height: auto;
 }
 
@@ -255,6 +255,7 @@ home-img {
 
 .home-img {
   animation: float 3s linear infinite;
+  text-align: center;
 }
 
 @keyframes float {
@@ -284,7 +285,7 @@ home-img {
 }
 
 .service {
-  background: var(--palet-1) url(../images/vectores/patron-2.svg) repeat;
+  background: var(--black) ;
   background-size: cover;
   background-position: center;
   padding: 2rem 9% !important;
@@ -308,7 +309,7 @@ home-img {
   width: 7rem;
   line-height: 7rem;
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   background: var(--palet-2);
   margin-bottom: 1rem;
   border-radius: 50%;
@@ -325,7 +326,7 @@ home-img {
   padding: 1rem 0;
   margin-top: -5rem;
   font-size: 6rem;
-  color: var(--palet-2);
+  color: var(--palet-1);
   font-family: 'BarleyScript';
 }
 
@@ -335,10 +336,10 @@ home-img {
   color: var(--white);
 }
 
-/*========== MENU ==========*/
-/*========== MENU ==========*/
+/*========== PRODUCTS ==========*/
+/*========== PRODUCTS ==========*/
 
-.menu {
+.products {
   background: var(--white) url(../images/vectores/patron-1.svg) repeat;
   background-size: contain;
   background-position: center;
@@ -360,8 +361,8 @@ home-img {
   display: flex;
   opacity: 1 !important;
   flex-direction: column;
-  background: url(../images/vectores/logo-footer.svg) no-repeat, linear-gradient(45deg, rgba(218, 12, 49, 1) 0%, rgba(250, 180, 22, 1) 100%) !important;
-  background-size: cover !important;
+  background: url(../images/vectores/logo-back-pr.svg) no-repeat, linear-gradient(45deg, rgba(237, 27, 38, 1) 0%, rgba(166, 12, 22, 1) 100%) !important;
+  background-size: contain !important;
   background-position-y: center !important;
   background-position-x: center !important;
   border-radius: 2rem;
@@ -661,7 +662,7 @@ home-img {
 .heading .script-review {
   font-family: 'BarleyScript';
   font-size: 10rem;
-  color: var(--palet-2);
+  color: var(--black);
 }
 
 .heading .contact-title {
@@ -916,8 +917,8 @@ home-img {
 }
 
 .footer {
-  background: url(../images/vectores/logo-footer.svg), rgba(0, 0, 0, 0.959);
-  background-size: cover;
+  background: url(../images/vectores/patron-1-white.svg), rgba(0, 0, 0, 0.959);
+  background-size: contain;
   background-position: center;
   padding: 3rem 9% !important;
 }
@@ -1485,7 +1486,7 @@ input.whats-input[type=text]:focus {
     align-items: center;
     gap: 3.5rem;
     z-index: 1;
-    background: url(../images/banner-ver.png) no-repeat;
+    background: url(../images/banner.png) no-repeat;
     background-size: cover;
     flex-wrap: wrap;
     background-position: center;
@@ -1513,7 +1514,11 @@ input.whats-input[type=text]:focus {
   }
 
   .logo-desing {
-    width: 10%;
+    width: 15%;
+  }
+
+  .home-img .img-home-img {
+    width: 100% !important;
   }
 
   .heading .sub-menu {
@@ -1555,7 +1560,7 @@ input.whats-input[type=text]:focus {
   }
 
   .logo-desing {
-    width: 15%;
+    width: 20%;
   }
 
   .heading .title-menu {
