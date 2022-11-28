@@ -4,15 +4,44 @@ let navbar = document.querySelector('.header .nav');
 var carritoEnTexto = "";
 
 setTimeout(() => {
- /*  document.getElementsByClassName("btn-s")[0].click();
-  document.getElementsByClassName("btn-p")[0].click(); */
-  document.getElementsByClassName("btn-a")[0].click();
-}, 1000);
-
-
-setTimeout(() => {
   document.getElementsByClassName("click")[0].click();
 }, 1000);
+
+
+$('.select li').on('click', function() {
+  var $select = $(this).parents('.select'),
+      $ul = $select.find('ul'), 
+      $li = $select.find('li');
+
+  var liCount = $li.length;
+  var liHeight =  $li.outerHeight();
+
+  if (window.screen.width > 768) {
+    if($select.is('.isOpen')){
+      $li.removeClass("isSelected");
+      $(this).addClass("isSelected");
+      /* $select.removeClass('isOpen').height(liHeight); */
+      var liIndex = $(this).index();
+      $ul.css(Modernizr.prefixed('transform'), 'translate3d(0, ' + -(liIndex * liHeight) + 'px, 0)');
+    } else {
+     /*  $select.addClass('isOpen').height(liCount * liHeight); */
+      $ul.css(Modernizr.prefixed('transform'), 'translate3d(0, 0, 0)');
+    }
+  } else {
+    if($select.is('.isOpen')){
+      $li.removeClass("isSelected");
+      $(this).addClass("isSelected");
+      $select.removeClass('isOpen').height(liHeight);
+      var liIndex = $(this).index();
+      $ul.css(Modernizr.prefixed('transform'), 'translate3d(0, ' + -(liIndex * liHeight) + 'px, 0)');
+    } else {
+      $select.addClass('isOpen').height(liCount * liHeight);
+      $ul.css(Modernizr.prefixed('transform'), 'translate3d(0, 0, 0)');
+    }
+  }
+
+  
+});
 
 menu.onclick = () => {
   menu.classList.toggle('fa-times');
@@ -280,235 +309,18 @@ function agregaTextoABase(base, textoAlInicio, textoAlFinal) {
 
 displayCart();
 
-$('#customers-testimonials-emp').owlCarousel({
-  interval: false,
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-bro').owlCarousel({
-  interval: false,
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-pai').owlCarousel({
-  interval: false,
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-chi').owlCarousel({
-  interval: false,
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-pll').owlCarousel({
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-acom').owlCarousel({
-  /* rtl: true, */
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-beb').owlCarousel({
-  /* rtl: true, */
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-$('#customers-testimonials-fast').owlCarousel({
-  /* rtl: true, */
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
-
-$('#customers-testimonials-mini').owlCarousel({
-  /* rtl: true, */
-  nav: true,
-  navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
-  margin: 0,
-  autoplay: false,
-  dots: false,
-
-  responsive: {
-    0: {
-      items: 1
-    },
-    768: {
-      items: 2
-    },
-    1170: {
-      items: 3
-    },
-    3840: {
-      items: 3
-    }
-  }
-});
-
 $('#customers-testimonials').owlCarousel({
   /* rtl: true, */
+  loop: false,
   nav: true,
   navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-  items: 3,
+  /* center: true, */
+  items: 4,
   margin: 0,
   autoplay: false,
   dots: false,
+  autoplayTimeout: 8500,
+  smartSpeed: 450,
 
   responsive: {
     0: {
@@ -518,53 +330,25 @@ $('#customers-testimonials').owlCarousel({
       items: 2
     },
     1170: {
-      items: 3
+      items: 2
     },
     3840: {
-      items: 3
+      items: 2
     }
   }
 });
 
-var totalItems = $('.item').length;
-if (totalItems > 3) {
-  $('.owl-carousel .item').each(function () {
-    var next = $(this).next();
-    if (!next.length) {
-      next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-    if (next.next().length > 0) {
-      next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
-    }
-    else {
-      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-    }
-  });
-}
-else {
-  (function () {
-    $('.owl-carousel .item').each(function () {
-      var itemToClone = $(this);
-      for (var i = 1; i < 2; i++) {
-        itemToClone = itemToClone.next();
-        if (!itemToClone.length) {
-          itemToClone = $(this).siblings(':first');
-        }
-        itemToClone.children(':first-child').clone()
-          .addClass("cloneditem-" + (i))
-          .appendTo($(this));
-        jQuery('.owl-carousel').on('slid.bs.carousel', function () {
-          var totalItems = jQuery('.owl-carousel .item').length;
-          var currentIndex = jQuery('.owl-carousel .item div.active').index() + 1;
-          if (totalItems == currentIndex) {
-            clearInterval(jQuery('.owl-carousel .item').data('bs.carousel').interval);
-          }
-        });
-      }
-    });
-  }());
-}
+$('.owl-filter-class').on('click', '.item', function () {
+  var $item = $(this);
+  var filter = $item.data('owl-filter')
+  owl.owlcarousel2_filter(filter);
+});
+var owl = $('.owl-carousel-class').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  items: 4 ,
+});
 
 popupWhatsApp = () => {
 
