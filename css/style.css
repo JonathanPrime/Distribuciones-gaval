@@ -341,8 +341,8 @@ home-img {
 /*========== PRODUCTS ==========*/
 /*========== PRODUCTS ==========*/
 
-ul {
-  height: 640px;
+.select-list {
+  height: 500px;
   overflow-y: scroll;
 }
 
@@ -1389,6 +1389,27 @@ input.whats-input[type=text]:focus {
 
 
 /* END WHATSAPP */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loader-container img{
+  height: 291px;
+  width: 441px;
+}
+
+.loader-container.fade-out {
+  top: -120%;
+}
 
 .alert-fixed {
   width: 20vw;
@@ -1536,6 +1557,11 @@ input.whats-input[type=text]:focus {
 @media (max-width: 768px) {
   .domicilio .dom-content .dom_description {
     text-align: center;
+  }
+
+  .loader-container img{
+    height: 241px;
+    width: 391px;
   }
 
   .home-text {
