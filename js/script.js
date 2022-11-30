@@ -48,15 +48,18 @@ $('.select li').on('click', function () {
     }
   } else {
     if ($select.is('.isOpen')) {
+      
       console.log('isopen');
       $li.removeClass("isSelected");
       $(this).addClass("isSelected");
       $select.removeClass('isOpen').height(liHeight);
       var liIndex = $(this).index();
+      document.getElementById("products").scrollIntoView(true);
       /* $ul.css(Modernizr.prefixed('transform'), 'translate3d(0, ' + -(liIndex * liHeight) + 'px, 0)'); */
     } else {
       console.log('isopen2');
       $select.addClass('isOpen').height(liCount * liHeight);
+      document.getElementById("products").scrollIntoView(true);
       /*  $ul.css(Modernizr.prefixed('transform'), 'translate3d(0, 0, 0)'); */
     }
   }

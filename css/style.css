@@ -341,10 +341,13 @@ home-img {
 /*========== PRODUCTS ==========*/
 /*========== PRODUCTS ==========*/
 
-.select-list {
-  height: 500px;
-  overflow-y: scroll;
+@media (min-width: 768px) {
+  .select-list {
+    height: 500px;
+    overflow-y: scroll;
+  }
 }
+
 
 .select {
   overflow: hidden;
